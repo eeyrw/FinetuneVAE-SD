@@ -1,0 +1,16 @@
+accelerate launch --mixed_precision="no"  train_new.py \
+  --pretrained_model_name_or_path="xxxx" \
+  --local_files_only "True" \
+  --train_data_dir="xxx" \
+  --prescale_resolution=768 \
+  --resolution=256 \
+  --train_batch_size=2 \
+  --gradient_accumulation_steps=1 \
+  --num_train_epochs=6 \
+  --learning_rate=1e-4 \
+  --max_grad_norm=1 \
+  --lr_scheduler="constant_with_warmup" --lr_warmup_steps=200 \
+  --full_finetune "False" \
+  --output_dir="output/xxxx" \
+  --lpips_loss_weight=0.35 \
+  --checkpointing_steps=20000
