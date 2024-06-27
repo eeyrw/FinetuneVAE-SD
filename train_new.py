@@ -540,7 +540,7 @@ def parse_args():
                         help='Do not connect to HF')
     parser.add_argument('--val_size', type=float, default=0.1)
     parser.add_argument('--kl_weight', type=float, default=1.)
-    parser.add_argument('--lpips_loss_weight', type=float, default=0.1)
+    parser.add_argument('--lpips_loss_weight', type=float, default=1.0)
     parser.add_argument('--debug', type=bool_t, default='False',
                         help='To debug train process')
     parser.add_argument('--full_finetune', type=bool_t, default='False',
